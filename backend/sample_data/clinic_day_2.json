@@ -1,0 +1,90 @@
+[
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-101",
+    "timestamp": "2026-07-29T08:00:00Z",
+    "doctor_id": "doc-3",
+    "line_items": [{"drug_name": "Vitamin C", "qty": 10, "unit_price_paise": 50}],
+    "payment_mode": "cash",
+    "amount_paid_paise": 500,
+    "discount_paise": 0,
+    "is_refund": false
+  },
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-102",
+    "timestamp": "2026-07-29T08:30:00Z",
+    "doctor_id": "doc-3",
+    "line_items": [{"drug_name": "Vitamin C", "qty": 5, "unit_price_paise": 50}],
+    "payment_mode": "upi",
+    "amount_paid_paise": 0,
+    "discount_paise": 250,
+    "is_refund": false
+  },
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-103",
+    "timestamp": "2026-07-29T09:00:00Z",
+    "doctor_id": "doc-4",
+    "line_items": [{"drug_name": "Antacid", "qty": 4, "unit_price_paise": 200}],
+    "payment_mode": "card",
+    "amount_paid_paise": 800,
+    "discount_paise": 0,
+    "is_refund": false
+  },
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-104",
+    "timestamp": "2026-07-29T09:20:00Z",
+    "doctor_id": "doc-4",
+    "line_items": [{"drug_name": "Antacid", "qty": 4, "unit_price_paise": 200}],
+    "payment_mode": "card",
+    "amount_paid_paise": -800,
+    "discount_paise": 0,
+    "is_refund": true
+  },
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-105",
+    "timestamp": "2026-07-29T09:20:00Z",
+    "doctor_id": "doc-3",
+    "line_items": [{"drug_name": "Vitamin C", "qty": 10, "unit_price_paise": 50}],
+    "payment_mode": "upi",
+    "amount_paid_paise": -500,
+    "discount_paise": 0,
+    "is_refund": true
+  },
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-106",
+    "timestamp": "2026-07-29T10:00:00Z",
+    "doctor_id": "doc-4",
+    "line_items": [{"drug_name": "Cough Drops", "qty": 2, "unit_price_paise": 300}],
+    "payment_mode": "cash",
+    "amount_paid_paise": 600,
+    "discount_paise": 0,
+    "is_refund": false
+  },
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-107",
+    "timestamp": "2026-07-29T10:15:00Z",
+    "doctor_id": "doc-4",
+    "line_items": [{"drug_name": "Cough Drops", "qty": 3, "unit_price_paise": 300}],
+    "payment_mode": "cash",
+    "amount_paid_paise": -900,
+    "discount_paise": 0,
+    "is_refund": true
+  },
+  {
+    "clinic_id": "clinic-2",
+    "visit_id": "visit-108",
+    "timestamp": "2026-07-29T11:00:00Z",
+    "doctor_id": "doc-3",
+    "line_items": [{"drug_name": "Antacid", "qty": 2, "unit_price_paise": 200}],
+    "payment_mode": "upi",
+    "amount_paid_paise": 300,
+    "discount_paise": 0,
+    "is_refund": false
+  }
+]

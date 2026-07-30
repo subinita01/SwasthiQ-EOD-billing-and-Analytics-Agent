@@ -3,6 +3,10 @@ __pycache__/
 *.pyc
 .venv/
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # Env files (secrets)
 .env
@@ -17,3 +21,5 @@ dist/
 .vscode/
 .idea/
 .DS_Store
+Thumbs.db
+*.log
