@@ -57,6 +57,25 @@ npm run dev
 
 Runs on `http://localhost:5173`, calling the backend at `VITE_API_BASE_URL` (`frontend/.env`, default `http://localhost:8000`). Load a billing log via the sidebar: upload a JSON file, or click one of the "Sample: Day N" buttons to load the same fixtures the backend test suite uses.
 
+## Deploying
+
+**Backend → Render.** `render.yaml` at the repo root defines the service as a Blueprint: root directory `backend`, `pip install -r requirements.txt`, `uvicorn app.main:app --host 0.0.0.0 --port $PORT` (no `--reload` in production, and Render assigns the port dynamically via `$PORT`). In the Render dashboard, **New → Blueprint**, point it at this repo, and it picks up `render.yaml` automatically. Two env vars are marked `sync: false` in the blueprint (not stored in the repo) and must be set manually in the dashboard after the first deploy:
+
+| Key | Value |
+|---|---|
+| `GROQ_API_KEY` | your Groq key |
+| `CORS_ALLOWED_ORIGINS` | your deployed frontend's URL, e.g. `https://your-app.vercel.app` |
+
+`CORS_ALLOWED_ORIGINS` matters: `main.py` defaults it to `http://localhost:5173` if unset, which would silently block every request from a real deployed frontend. Render's free tier spins the service down after ~15 min idle (30-50s cold start on the next request) — fine for a demo, worth knowing.
+
+**Frontend → Vercel.** Deploy `frontend/` as its own Vercel project (root directory `frontend`). Set one env var at build time:
+
+| Key | Value |
+|---|---|
+| `VITE_API_BASE_URL` | your deployed backend's URL, e.g. `https://your-service.onrender.com` |
+
+Vite bakes this into the built JS bundle at build time — it must be set before the build runs, not just available at request time.
+
 ## API contract
 
 Base URL: `http://localhost:8000` (or whatever `VITE_API_BASE_URL` points at). All endpoints below are `POST` and take the **raw billing log as the entire request body** — a bare JSON array of rows, not wrapped in an envelope object:
