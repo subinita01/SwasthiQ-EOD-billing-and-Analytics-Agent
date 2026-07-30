@@ -1,0 +1,35 @@
+[
+  {
+    "clinic_id": "clinic-3",
+    "visit_id": "visit-201",
+    "timestamp": "2026-07-30T07:05:00Z",
+    "doctor_id": "doc-5",
+    "line_items": [{"drug_name": "Ibuprofen", "qty": 1, "unit_price_paise": 300}],
+    "payment_mode": "cash",
+    "amount_paid_paise": 300,
+    "discount_paise": 0,
+    "is_refund": false
+  },
+  {
+    "clinic_id": "clinic-3",
+    "visit_id": "visit-202",
+    "timestamp": "2026-07-30T07:05:00Z",
+    "doctor_id": "doc-5",
+    "line_items": [{"drug_name": "Ibuprofen", "qty": 1, "unit_price_paise": 300}],
+    "payment_mode": "cash",
+    "amount_paid_paise": -300,
+    "discount_paise": 0,
+    "is_refund": true
+  },
+  {
+    "clinic_id": "clinic-3",
+    "visit_id": "visit-203",
+    "timestamp": "2026-07-30T12:00:00Z",
+    "doctor_id": "doc-5",
+    "line_items": [{"drug_name": "Multivitamin", "qty": 1, "unit_price_paise": 1000}],
+    "payment_mode": "upi",
+    "amount_paid_paise": 1000,
+    "discount_paise": 0,
+    "is_refund": false
+  }
+]
