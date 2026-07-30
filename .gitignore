@@ -23,3 +23,6 @@ dist/
 .DS_Store
 Thumbs.db
 *.log
+
+# Local-only Claude Code project notes - not part of the public repo
+CLAUDE.md
