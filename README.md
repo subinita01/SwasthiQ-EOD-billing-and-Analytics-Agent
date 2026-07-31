@@ -1,14 +1,8 @@
 # SwasthiQ EOD Billing & Analytics Agent
 
-See [REFERENCE.md](./REFERENCE.md) for the full assignment spec (hard constraints, billing log schema, required screens, grading priorities). See [CLAUDE.md](./CLAUDE.md) for implementation-level detail on every module. This file covers setup, the REST API contract, and how the pipeline keeps the AI narrative grounded in the deterministic reports.
 
-## Getting started with Claude Code
-
-```bash
-npm install -g @anthropic-ai/claude-code
-cd swasthiq-eod-agent
-claude
-```
+Frontend deployed at vercel : https://swasthi-q-eod-billing-and-analytics-agent-gl3kj87h2.vercel.app/
+Backend deployed at render : https://swasthiq-eod-billing-and-analytics-agent-q5v2.onrender.com/
 
 ## Project layout
 
